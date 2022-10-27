@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script defer src="./main.js"></script>
+    <title>Profiili</title>
+</head>
+<body>
+    <div id="app">
+        <div id="top-menu">
+            <button onclick="setActive(this, 'profiili')" class="active">Profiili</button>
+            <button onclick="setActive(this, 'lomake')">Ota yhteyttä</button>
+        </div>
+
+        <div id="content">
+            <div id="profiili" class="section">
+                <img 
+                    title="Don't worry! Me no really take your cookie!"
+                    id="ppic" 
+                    src="https://i.scdn.co/image/ab6761610000e5eba3a7cba23d68a4e73c3b8155" 
+                    alt="Profile picture">
+                <h1>Oma Profiilini</h1>
+
+                <div class="row-up">
+                    <h2>Perustiedot</h2>
+                    <table id="perustiedot">
+                        <tr>
+                            <th>Nimi:</th> <td>Miika Toivanen</td>
+                        </tr>
+                        <tr>
+                            <th>Sukupuoli:</th> <td>Mies</td>
+                        </tr>
+                        <tr>
+                            <th>Syntymävuosi:</th> <td>1991</td>
+                        </tr>
+                        <tr>
+                            <th>Asuinpaikka:</th> <td>Tampere</td>
+                        </tr>
+                    </table>
+                </div>
+
+                
+                <div class="row-up">
+                    <h2>Harrastukset</h2>
+                    <ul>
+                        <li>koodailu</li>
+                        <li>pelailu</li>
+                        <li>musiikki</li>
+                    </ul>
+                </div>
+
+                <div class="row-up">
+                    <h2>Tilastotietoa</h2>
+                    <table id="tilastotietoa">
+                        <tr>
+                            <td>Osallistunut tapahtumiin:</td> <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Osallistunut projekteihin:</td> <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Toiminut ohjaajana:</td> <td>7</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="row-up">
+                    <h2>Oma kuvaus</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis in eu mi bibendum neque egestas congue quisque. Interdum velit laoreet id donec ultrices tincidunt arcu. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum.</p>
+                    <p> Elit sed vulputate mi sit amet. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Sed pulvinar proin gravida hendrerit. Tortor condimentum lacinia quis vel eros donec ac odio. Mauris nunc congue nisi vitae suscipit tellus mauris a diam. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper. Interdum posuere lorem ipsum dolor sit amet. Enim nec dui nunc mattis. Ut faucibus pulvinar elementum integer enim neque. Elementum nibh tellus molestie nunc non blandit massa enim nec. Venenatis urna cursus eget nunc scelerisque viverra mauris.</p>
+                </div>
+
+                <div class="row-up">
+                    <img src="https://steinercem.s3.amazonaws.com/steinershow/wp-content/uploads/2015/07/usa-election_trump1.jpg" alt="Donald Trump Force">
+                </div>
+            </div>
+
+            <div id="lomake" class="section hide">
+                <h1>Ota yhteyttä</h1>
+
+                <form id="contact-form" action="/contact" method="POST">
+
+                    <div>
+                        <h3>Nimi:</h3>
+                        <input id="nimi" type="text" placeholder="Nimi">
+                    </div>
+    
+                    <div>
+                        <h3>Sukupuoli:</h3>
+                        <input name="gender" type="radio" id="gender1" value="mies"> <label for="gender1">Mies</label>
+                        <input name="gender" type="radio" id="gender2" value="mies"> <label for="gender2">Nainen</label>
+                        <input name="gender" type="radio" id="gender3" value="mies"> <label for="gender3">Muu</label>
+                    </div>
+                    
+                    <div class="row">
+                        <h3>Yhteydenoton syy:</h3>
+                        <select>
+                            <option disabled selected>valitse syy</option>
+                            <option value="1">syy 1</option>
+                            <option value="2">syy 2</option>
+                            <option value="3">syy 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <h3>Viesti:</h3>
+                        <textarea  name="viesti" id="viesti" placeholder="Viestisi..." rows="6"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Lähetä">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
